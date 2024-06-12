@@ -2,13 +2,13 @@
 
 %**** L1CA ****************************************************************
 %---- Example 1: LI C/A (nyquist frequency)
-modulation = 'L1CA';
-fs = 1.023e6;
-prn_chips = 1023;
-prn_time = 1e-3;
-n_periods = 1;
+% modulation = 'L1CA';
+% fs = 1.023e6;
+% prn_chips = 1023;
+% prn_time = 1e-3;
+% n_periods = 1;
 
-%---- Example 2: LI C/A (higher frequency)
+% %---- Example 2: LI C/A (higher frequency)
 % modulation = 'L1CA';
 % fs = 12.7e6;  % arbitrary
 % prn_chips = 1023;
@@ -39,11 +39,11 @@ n_periods = 1;
 % n_periods = 15.71;  % arbitrary
 
 %---- Example 6: LI C/A (smaller period)
-% modulation = 'L1CA';
-% fs = 1.023e6;
-% prn_chips = 1023;
-% prn_time = 1e-3;
-% n_periods = 0.518;  % arbitrary
+modulation = 'L1CA';
+fs = 1.023e6;
+prn_chips = 1023;
+prn_time = 1e-3;
+n_periods = 0.518;  % arbitrary
 
 %**** L5 ******************************************************************
 %---- Example 7: L5 (nyquist frequency)
@@ -139,7 +139,7 @@ n_periods = 1;
 %*************************************************************************
 
 
-[I Q] = GNSSsignalgen(1, modulation,fs,n_periods);
+[I, Q] = GNSSsignalgen(1, modulation,fs,n_periods);
 signal = I+1j*Q;
 n_chips = length(signal)/fs*prn_chips/prn_time;
 
@@ -216,6 +216,6 @@ figure,
 % for i=1:floor(n_periods)-1
 %     RES(i) = ~isequal(signal(prn_time*fs*(i-1)+1:prn_time*fs*i),signal(prn_time*fs*i+1:prn_time*fs*(i+1)));
 % end
-% 
+
 % figure, 
 %         plot(1:floor(n_periods)-1,RES);
