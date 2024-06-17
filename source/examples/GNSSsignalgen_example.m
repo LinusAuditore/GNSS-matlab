@@ -2,11 +2,11 @@
 
 %**** L1CA ****************************************************************
 %---- Example 1: LI C/A (nyquist frequency)
-% modulation = 'L1CA';
-% fs = 1.023e6;
-% prn_chips = 1023;
-% prn_time = 1e-3;
-% n_periods = 1;
+modulation = 'L1CA';
+fs = 1.023e6;
+prn_chips = 1023;
+prn_time = 1e-3;
+n_periods = 1;
 
 % %---- Example 2: LI C/A (higher frequency)
 % modulation = 'L1CA';
@@ -39,11 +39,11 @@
 % n_periods = 15.71;  % arbitrary
 
 %---- Example 6: LI C/A (smaller period)
-modulation = 'L1CA';
-fs = 1.023e6;
-prn_chips = 1023;
-prn_time = 1e-3;
-n_periods = 0.518;  % arbitrary
+% modulation = 'L1CA';
+% fs = 1.023e6;
+% prn_chips = 1023;
+% prn_time = 1e-3;
+% n_periods = 0.518;  % arbitrary
 
 %**** L5 ******************************************************************
 %---- Example 7: L5 (nyquist frequency)
